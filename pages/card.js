@@ -29,19 +29,19 @@ const FeedCard = () => {
       </div>
       <div className="flex items-center mt-8">
         <div className="flex items-center">
-          {["Ellipse 2"].map((path) => {
-            return (
-              <div key={path}>
-                <Image
-                  className="rounded-full"
-                  src={`/${path}.png`}
-                  alt="pet"
-                  width="50"
-                  height="50"
-                />
-              </div>
-            );
-          })}
+        {["Ellipse 2"].map((path) => {
+          return (
+            <div key={path}>
+              <Image
+                className="rounded-tr-md rounded-tl-md"
+                src={`/${path}.png`}
+                alt="pet"
+                width="40"
+                height="40"
+              />
+            </div>
+          );
+        })}
         </div>
         <div className="ml-4">
           <p>Michell Appleton</p>
