@@ -17,7 +17,10 @@ import {
   IonTabButton,
   IonTabs,
   IonTabBar,
+  IonBadge
 } from "@ionic/react";
+
+import { calendar, personCircle, map, informationCircle, listOutline, settingsOutline } from 'ionicons/icons';
 
 import Image from "next/image";
 const Home = () => {
@@ -106,70 +109,25 @@ const Home = () => {
             awhile, and climb a mountain or spend a week in the woods. Wash your
             spirit clean.
           </IonCardContent>
-          <div className="flex justify-between">
-          <IonTabButton tab="schedule">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              className="h-5 w-5"
-              viewBox="0 0 20 20"
-              fill="currentColor"
-            >
-              <path d="M4 3a2 2 0 100 4h12a2 2 0 100-4H4z" />
-              <path
-                fillRule="evenodd"
-                d="M3 8h14v7a2 2 0 01-2 2H5a2 2 0 01-2-2V8zm5 3a1 1 0 011-1h2a1 1 0 110 2H9a1 1 0 01-1-1z"
-                clipRule="evenodd"
-              />
-            </svg>
-
-            <IonLabel>Schedule</IonLabel>
-          </IonTabButton>
-
-          <IonTabButton tab="speakers">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              className="h-6 w-6"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M4 6h16M4 10h16M4 14h16M4 18h16"
-              />
-            </svg>
-
-            <IonLabel>Lists</IonLabel>
-          </IonTabButton>
-
-          <IonTabButton tab="map">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              className="h-6 w-6"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"
-              />
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"
-              />
-            </svg>
-            <IonLabel>Settings</IonLabel>
-          </IonTabButton>
-        </div>
         </IonCard>
       </IonContent>
+            <div className="flex justify-between">
+            <IonTabButton tab="schedule">
+        <IonIcon icon={calendar} />
+        <IonLabel>Schedule</IonLabel>
+        <IonBadge>6</IonBadge>
+      </IonTabButton>
+
+      <IonTabButton tab="speakers">
+        <IonIcon icon={listOutline} />
+        <IonLabel>Lists</IonLabel>
+      </IonTabButton>
+
+      <IonTabButton tab="map">
+        <IonIcon icon={settingsOutline} />
+        <IonLabel>Settings</IonLabel>
+      </IonTabButton>
+            </div>
     </IonPage>
   );
 };
